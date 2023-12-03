@@ -1,17 +1,17 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { AppGateway } from './app/app.gateway';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Chat } from './chat.entity';
+import { AppGateway } from './app.gateway';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
-      username: 'admin',
-      password: 'password',
+      username: 'postgres',
+      password: '1234',
       database: 'sockets-chat',
       entities: [Chat],
       synchronize: true,

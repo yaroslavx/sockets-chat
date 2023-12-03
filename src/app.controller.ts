@@ -8,7 +8,7 @@ export class AppController {
   @Get('/chat')
   @Render('index')
   Home() {
-    return;
+    return { message: 'Hello world!' };
   }
 
   @Get('/api/chat')

@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { AppGateway } from './app.gateway';
+import { AppGateway } from './app/app.gateway';
 
-describe('AppGateway', () => {
+describe('AppGatewat', () => {
   let gateway: AppGateway;
 
   beforeEach(async () => {

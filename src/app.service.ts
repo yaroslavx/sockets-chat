@@ -8,11 +8,9 @@ export class AppService {
   constructor(
     @InjectRepository(Chat) private chatRepository: Repository<Chat>,
   ) {}
-
   async createMessage(chat: Chat): Promise<Chat> {
     return await this.chatRepository.save(chat);
   }
-
   async getMessage(): Promise<Chat[]> {
     return await this.chatRepository.find();
   }
